@@ -1,5 +1,6 @@
 import Mastermind_Data
 
+
 class dinmor:
     dict = {
         "blå": 0,
@@ -11,14 +12,13 @@ class dinmor:
         gæt = ["blå", "blå", "blå"]
         return gæt
 
-    def tjekFarve(self, gæt : tuple, metode = huskFarve()):
-        rigtig = metode()
+    def tjekFarve(self, gæt: tuple):
+        rigtig = self.huskFarve()
         for x in range(len(rigtig)):
             if rigtig[x] == gæt[x]:
                 print("yes")
             else:
                 print("no")
-
 
     def GenereFarve(self):
         pass
@@ -27,4 +27,3 @@ class dinmor:
 gæt = ["blå", "grøn", "blå"]
 
 dinmor().tjekFarve(gæt)
-
