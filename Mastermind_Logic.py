@@ -22,14 +22,12 @@ class dinLogik:
         for x in range(lan):
             if 0 < get.count(start[x]) and farver.count(get[x]) == 0:
                 farver.insert(x, get[x])
-        print(farver)
 
 
         for x in range(len(farver)):
 
             if 0 != get.count(farver[x]):
                 svar[1] = get.count(farver[x]) + svar[1]
-                print(svar[1])
 
         for x in range(lan):
             if start[x] == get[x]:
@@ -41,10 +39,3 @@ class dinLogik:
     def GenereFarve(self):
         pass
 
-
-geat = ["blå", "grøn", "blå", "rød", "lys blå"]
-start = ["blå", "grøn", "blå", "røfa", "lygesgr"]
-lo = dinLogik()
-lo.huskFarve(start)
-print(lo.dat.getStart())
-print(lo.tjekFarve(geat))
