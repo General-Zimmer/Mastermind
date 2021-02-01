@@ -2,8 +2,6 @@ import Mastermind_Data as Da
 import unittest
 
 
-
-
 class DataTests(unittest.TestCase):
     def setUp(self):
         dat = Da.data()

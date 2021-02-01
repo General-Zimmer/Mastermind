@@ -1,21 +1,22 @@
-import Mastermind_Data
+import Mastermind_Data as data
 
 
-class dinmor:
-    dict = {
-        "blå": 0,
-        "grøn": 1,
-        "gul": 2,
-    }
+class dinLogik:
+
+    def __init__(self):
+        self.dat = data.data()
 
     def huskFarve(self):
-        gæt = ["blå", "blå", "blå"]
-        return gæt
+        farver = []
+        for x in range(4):
+            farver.insert(x, input())
+        print(farver)
+        self.dat.gemStart(farver)
 
-    def tjekFarve(self, gæt: tuple):
-        rigtig = self.huskFarve()
+    def tjekFarve(self, get: list):
+        rigtig = self.dat.getStart()
         for x in range(len(rigtig)):
-            if rigtig[x] == gæt[x]:
+            if rigtig[x] == get[x]:
                 print("yes")
             else:
                 print("no")
@@ -24,6 +25,4 @@ class dinmor:
         pass
 
 
-gæt = ["blå", "grøn", "blå"]
 
-dinmor().tjekFarve(gæt)
