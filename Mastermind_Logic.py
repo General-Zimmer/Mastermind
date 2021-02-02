@@ -7,10 +7,7 @@ class dinLogik:
         self.dat = data.data()
 
     def huskFarve(self, lst: list):
-        farver = []
-        for x in range(len(lst)):
-            farver.insert(x, lst[x])
-        self.dat.gemStart(farver)
+        self.dat.gemStart(lst)
 
     def tjekFarve(self, get: list):
 
