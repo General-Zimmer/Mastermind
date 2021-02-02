@@ -20,7 +20,7 @@ class LogicTests(unittest.TestCase):
         self.lo = log.dinLogik()
 
     def test_save_tjekfarve(self):
-        self.lo.huskFarve(["grøn", "blå", "hvid", "gul", "lilla"])
+        self.lo.huskStart(["grøn", "blå", "hvid", "gul", "lilla"])
         self.assertEqual([1, 1], self.lo.tjekFarve(["grøn", "null", "blå", "null", "null"]))
 
     def tearDown(self):

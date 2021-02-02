@@ -6,7 +6,7 @@ class dinLogik:
     def __init__(self):
         self.dat = data.data()
 
-    def huskFarve(self, lst: list):
+    def huskStart(self, lst: list):
         self.dat.gemStart(lst)
 
     def tjekFarve(self, get: list):
