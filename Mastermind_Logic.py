@@ -23,7 +23,6 @@ class dinLogik:
             if 0 < get.count(start[x]) and farver.count(get[x]) == 0:
                 farver.insert(x, get[x])
 
-
         for x in range(len(farver)):
 
             if 0 != get.count(farver[x]):
@@ -36,6 +35,9 @@ class dinLogik:
         svar[1] = svar[1] - svar[0]
         return svar
 
-    def GenereFarve(self):
-        pass
 
+# geat = ["blå", "grøn", "blå", "rød", "lys blå"]
+# start = ["blå", "grøn", "blå", "røfa", "lygesgr"]
+# lo = dinLogik()
+# lo.huskFarve(start)
+# print(lo.tjekFarve(geat))
