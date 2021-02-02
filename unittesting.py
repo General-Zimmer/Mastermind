@@ -19,7 +19,7 @@ class LogicTests(unittest.TestCase):
     def setUp(self):
         self.lo = log.dinLogik()
 
-    def test_save(self):
+    def test_save_tjekfarve(self):
         self.lo.huskFarve(["grøn", "blå", "hvid", "gul", "lilla"])
         self.assertEqual([1, 1], self.lo.tjekFarve(["grøn", "null", "blå", "null", "null"]))
 
