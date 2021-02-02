@@ -1,7 +1,6 @@
 class data():
 
     def __init__(self):
-
         self.starts = []
 
     def gemStart(self, income: list):
