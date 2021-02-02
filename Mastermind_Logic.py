@@ -17,11 +17,10 @@ class dinLogik:
         lan = len(start)
 
         for x in range(lan):
-            if 0 < get.count(start[x]) and farver.count(get[x]) == 0:
+            if 0 < start.count(get[x]) and farver.count(get[x]) == 0:
                 farver.insert(x, get[x])
 
         for x in range(len(farver)):
-
             if 0 != get.count(farver[x]):
                 svar[1] = get.count(farver[x]) + svar[1]
 
@@ -29,6 +28,7 @@ class dinLogik:
             if start[x] == get[x]:
                 svar[0] = svar[0] + 1
 
+        # Første tal er rigtig placering og farve, anden tal er kun rigtig farve
         svar[1] = svar[1] - svar[0]
         return svar
 

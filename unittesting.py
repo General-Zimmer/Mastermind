@@ -9,7 +9,7 @@ class DataTests(unittest.TestCase):
 
     def test_save_get(self):
         self.dat.gemStart(["blå", "grøn", "rød", "blå"])
-        self.assertEqual(self.dat.getStart(), ["blå", "grøn", "rød", "blå"])
+        self.assertEqual(["blå", "grøn", "rød", "blå"], self.dat.getStart())
 
     def tearDown(self):
         pass
@@ -17,10 +17,11 @@ class DataTests(unittest.TestCase):
 
 class LogicTests(unittest.TestCase):
     def setUp(self):
-        lo = log.dinLogik
+        self.lo = log.dinLogik()
 
     def test_save(self):
-        pass
+        self.lo.huskFarve(["grøn", "blå", "hvid", "gul", "lilla"])
+        self.assertEqual([1, 1], self.lo.tjekFarve(["grøn", "null", "blå", "null", "null"]))
 
     def tearDown(self):
         pass
