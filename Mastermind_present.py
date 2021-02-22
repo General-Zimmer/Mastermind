@@ -16,8 +16,8 @@ for i in range(ncombi):
 for i in range(2):
     gui.rowconfigure(i + ncombi, weight=1)
 
-game = logic.dinLogik
-game().makeStart(ncombi)
+game = logic.dinLogik()
+game.makeStart(ncombi)
 
 backg = Label(gui, bg="grey")
 backg.grid(column=0, row=0, columnspan=nguess, rowspan=ncombi, sticky="NESW")
@@ -70,10 +70,9 @@ def AddWhite():
 def submit():
     global nx
     if len(Guess) == ncombi:
-        SV = game().tjekFarve(Guess)
-        print(Guess)
-        print(SV)
-        print(game().dat.getStart())
+        SV = game.tjekFarve(Guess)
+        exec(f'K{nx}R.config(text="{SV[0]}")')
+        exec(f'K{nx}W.config(text="{SV[1]}")')
         for i in range(len(Guess)):
             Guess.pop(0)
         nx += 1
