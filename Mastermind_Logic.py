@@ -22,7 +22,7 @@ class dinLogik:
     def makeStart(self, num):
         lst = []
         for x in range(num):
-            lst.insert(self.trans.get(randrange(6)))
+            lst.insert(self.trans.get(x, randrange(6)))
         self.dat.gemStart(lst)
 
     def tjekFarve(self, get: list):
