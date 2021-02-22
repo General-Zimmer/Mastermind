@@ -17,12 +17,13 @@ for i in range(2):
     gui.rowconfigure(i + ncombi, weight=1)
 
 game = logic.dinLogik
+game().makeStart(ncombi)
 
 backg = Label(gui, bg="grey")
 backg.grid(column=0, row=0, columnspan=nguess, rowspan=ncombi, sticky="NESW")
 for i in range(nguess+1):
     backg.columnconfigure(i, weight=2)
-for i in range(ncombi+1):
+for i in range(ncombi):
     backg.rowconfigure(i, weight=2)
 
 UI = Label(gui, bg="black")
@@ -55,7 +56,6 @@ def submit():
         print(Guess)
         for i in range(len(Guess)):
             Guess.pop(0)
-        ny = 0
         nx += 1
 def delete():
     if len(Guess) > 0:
@@ -76,9 +76,9 @@ for x in range(nguess):
     for i in range(2):
         exec(f'K{x}.columnconfigure({i}, weight=1)')
     exec(f'K{x}.rowconfigure(0, weight=1)')
-    exec(f'K{x}R = Label(K{x}, bg="red", relief=RAISED)')
+    exec(f'K{x}R = Label(K{x}, bg="red", relief=RAISED, text="0")')
     exec(f'K{x}R.grid(column=0, row=0, sticky="NESW")')
-    exec(f'K{x}W = Label(K{x}, bg="white", relief=RAISED)')
+    exec(f'K{x}W = Label(K{x}, bg="white", relief=RAISED, text="0")')
     exec(f'K{x}W.grid(column=1, row=0, sticky="NESW")')
 
 green = Button(gui, bg="dark green", command=AddGreen)
