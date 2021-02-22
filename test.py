@@ -1,13 +1,19 @@
-from tkinter import *
+import random
 
-OPTIONS = ["Jan", "Feb", "Mar"]  # etc
+de = ("%02x" % random.randint(0, 255))
+re = ("%02x" % random.randint(0, 255))
+we = ("%02x" % random.randint(0, 255))
+ge = "#"
+color = ge + de + re + we
+print(color)
 
-master = Tk()
 
-variable = StringVar(master)
-variable.set(OPTIONS[0])  # default value
+def get_complementary(color):
+    color = color[1:]
+    color = int(color, 16)
+    comp_color = 0xFFFFFF ^ color
+    comp_color = "#%06X" % comp_color
+    return comp_color
 
-w = OptionMenu(master, variable, *OPTIONS)
-w.pack()
 
-mainloop()
+print(get_complementary(color))

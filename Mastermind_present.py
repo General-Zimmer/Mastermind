@@ -1,26 +1,54 @@
 from tkinter import *
+# import random
 
+nguess = 10
+ncombi = 4
+ncolour = 6
 
 gui = Tk()
 gui.title("MustardMind")
 gui.geometry("1000x500")
-for i in range(10):
+for i in range(nguess):
     gui.columnconfigure(i, weight=2)
-for i in range(4):
+for i in range(ncombi):
     gui.rowconfigure(i, weight=2)
 for i in range(2):
-    gui.rowconfigure(i + 4, weight=1)
+    gui.rowconfigure(i + ncombi, weight=1)
 
 backg = Label(gui, bg="grey")
-backg.grid(column=0, row=0, columnspan=10, rowspan=4, sticky="NESW")
+backg.grid(column=0, row=0, columnspan=nguess, rowspan=ncombi, sticky="NESW")
+for i in range(nguess):
+    backg.columnconfigure(i, weight=2)
+for i in range(ncombi+1):
+    backg.rowconfigure(i, weight=2)
+
 UI = Label(gui, bg="black")
-UI.grid(column=0, row=4, columnspan=10, rowspan=2, sticky="NESW")
+UI.grid(column=0, row=ncombi, columnspan=nguess, rowspan=2, sticky="NESW")
 
+# making random button color
+# def get_random_color():
+#    de = ("%02x" % random.randint(0, 255))
+#    re = ("%02x" % random.randint(0, 255))
+#    we = ("%02x" % random.randint(0, 255))
+#    ge = "#"
+#    color = ge + de + re + we
+#    return color
+#
+# def get_complementary(color):
+#    color = color[1:]
+#    color = int(color, 16)
+#    comp_color = 0xFFFFFF ^ color
+#    comp_color = "#%06X" % comp_color
+#    return comp_color
 
-GuessLst = []
+Guess = []
+nx = 0
+
 def AddColor(n):
-    GuessLst.append(n)
-    print(GuessLst)
+    if len(Guess) < 4:
+        Guess.append(n)
+        exec(f'L{nx}R{len(Guess)-1}.config(bg="{n}")')
+
 def AddGreen():
     AddColor("dark green")
 def AddRed():
@@ -33,6 +61,25 @@ def AddPurple():
     AddColor("purple")
 def AddWhite():
     AddColor("white")
+def submit():
+    global nx
+    if len(Guess) == 4:
+        # test combination
+        print(Guess)
+        for i in range(len(Guess)):
+            Guess.pop(0)
+        ny = 0
+        nx += 1
+def delete():
+    if len(Guess) > 0:
+        Guess.pop(-1)
+        exec(f'L{nx}R{len(Guess)}.config(bg="gray")')
+
+
+for x in range(nguess):
+    for n in range(ncombi):
+        exec(f'L{x}R{n} = Label(backg, bg="gray", relief=RAISED)')
+        exec(f'L{x}R{n}.grid(column={x}, row={n}, sticky="NESW")')
 
 green = Button(gui, bg="dark green", command=AddGreen)
 green.grid(column=0, row=4, sticky="NESW")
@@ -46,5 +93,9 @@ purple = Button(gui, bg="purple", command=AddPurple)
 purple.grid(column=2, row=5, sticky="NESW")
 white = Button(gui, bg="white", command=AddWhite)
 white.grid(column=2, row=4, sticky="NESW")
+guess = Button(gui, bg="black", command=submit, text="submit guess", fg="white")
+guess.grid(column=3, row=5, sticky="NESW")
+remove = Button(gui, bg="black", command=delete, text="remove last", fg="white")
+remove.grid(column=3, row=4, sticky="NESW")
 
 gui.mainloop()
