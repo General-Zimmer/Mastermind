@@ -48,8 +48,12 @@ class dinLogik:
         svar[1] = svar[1] - svar[0]
         return svar
 
-# geat = ["blå", "grøn", "blå", "rød", "lys blå"]
-# start = ["blå", "grøn", "blå", "røfa", "lygesgr"]
-# lo = dinLogik()
-# lo.huskFarve(start)
-# print(lo.tjekFarve(geat))
+#geat = ["white", "dark green", "yellow", "dark blue"]
+#start = ["white", "yellow", "dark green", "dark yellow"]
+#lo = dinLogik()
+#lo.huskStart(start)
+
+
+#lo.makeStart(4)
+#print(lo.tjekFarve(geat))
+#print(lo.dat.getStart())
