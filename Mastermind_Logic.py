@@ -25,7 +25,6 @@ class dinLogik:
             lst.insert(self.trans.get(randrange(6)))
         self.dat.gemStart(lst)
 
-
     def tjekFarve(self, get: list):
 
         svar = [0, 0]
