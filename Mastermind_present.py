@@ -29,40 +29,6 @@ for i in range(ncombi):
 UI = Label(gui, bg="black")
 UI.grid(column=0, row=ncombi, columnspan=nguess, rowspan=2, sticky="NESW")
 
-Guess = []
-nx = 0
-
-def AddColor(n):
-    if len(Guess) < 4:
-        Guess.append(n)
-        exec(f'L{nx}R{len(Guess)-1}.config(bg="{n}")')
-
-def AddGreen():
-    AddColor("dark green")
-def AddRed():
-    AddColor("dark red")
-def AddBlue():
-    AddColor("dark blue")
-def AddYellow():
-    AddColor("Yellow")
-def AddPurple():
-    AddColor("purple")
-def AddWhite():
-    AddColor("white")
-def submit():
-    global nx
-    if len(Guess) == ncombi:
-        # test combination
-        print(Guess)
-        for i in range(len(Guess)):
-            Guess.pop(0)
-        nx += 1
-def delete():
-    if len(Guess) > 0:
-        Guess.pop(-1)
-        exec(f'L{nx}R{len(Guess)}.config(bg="gray")')
-
-
 for x in range(nguess):
     for n in range(ncombi):
         exec(f'L{x}R{n} = Label(backg, bg="gray", relief=RAISED)')
@@ -81,21 +47,56 @@ for x in range(nguess):
     exec(f'K{x}W = Label(K{x}, bg="white", relief=RAISED, text="0")')
     exec(f'K{x}W.grid(column=1, row=0, sticky="NESW")')
 
+Guess = []
+nx = 0
+
+def AddColor(n):
+    if len(Guess) < ncombi:
+        Guess.append(n)
+        exec(f'L{nx}R{len(Guess)-1}.config(bg="{n}")')
+
+def AddGreen():
+    AddColor("dark green")
+def AddRed():
+    AddColor("dark red")
+def AddBlue():
+    AddColor("dark blue")
+def AddYellow():
+    AddColor("Yellow")
+def AddPurple():
+    AddColor("purple")
+def AddWhite():
+    AddColor("white")
+def submit():
+    global nx
+    if len(Guess) == ncombi:
+        SV = game().tjekFarve(Guess)
+        print(Guess)
+        print(SV)
+        print(game().dat.getStart())
+        for i in range(len(Guess)):
+            Guess.pop(0)
+        nx += 1
+def delete():
+    if len(Guess) > 0:
+        Guess.pop(-1)
+        exec(f'L{nx}R{len(Guess)}.config(bg="gray")')
+
 green = Button(gui, bg="dark green", command=AddGreen)
-green.grid(column=0, row=4, sticky="NESW")
+green.grid(column=0, row=ncombi, sticky="NESW")
 red = Button(gui, bg="dark red", command=AddRed)
-red.grid(column=1, row=4, sticky="NESW")
+red.grid(column=1, row=ncombi, sticky="NESW")
 yellow = Button(gui, bg="yellow", command=AddYellow)
-yellow.grid(column=1, row=5, sticky="NESW")
+yellow.grid(column=1, row=ncombi+1, sticky="NESW")
 blue = Button(gui, bg="dark blue", command=AddBlue)
-blue.grid(column=0, row=5, sticky="NESW")
+blue.grid(column=0, row=ncombi+1, sticky="NESW")
 purple = Button(gui, bg="purple", command=AddPurple)
-purple.grid(column=2, row=5, sticky="NESW")
+purple.grid(column=2, row=ncombi+1, sticky="NESW")
 white = Button(gui, bg="white", command=AddWhite)
-white.grid(column=2, row=4, sticky="NESW")
+white.grid(column=2, row=ncombi, sticky="NESW")
 guess = Button(gui, bg="black", command=submit, text="submit guess", fg="white")
-guess.grid(column=3, row=5, sticky="NESW")
+guess.grid(column=3, row=ncombi+1, sticky="NESW")
 remove = Button(gui, bg="black", command=delete, text="remove last", fg="white")
-remove.grid(column=3, row=4, sticky="NESW")
+remove.grid(column=3, row=ncombi, sticky="NESW")
 
 gui.mainloop()
