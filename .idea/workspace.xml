@@ -34,7 +34,7 @@
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Python 3.7" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for unittesting.DataTests.test_save_get">
+  <component name="RunManager" selected="Python.Mastermind_present">
     <configuration name="Mastermind_Data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Mastermind" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -118,9 +118,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for unittesting.DataTests.test_save_get" />
         <item itemvalue="Python.Mastermind_present" />
         <item itemvalue="Python.test" />
+        <item itemvalue="Python tests.Unittests for unittesting.DataTests.test_save_get" />
         <item itemvalue="Python.Mastermind_Data" />
       </list>
     </recent_temporary>
@@ -131,42 +131,30 @@
   <component name="TaskManager">
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
   <component name="WindowStateProjectService">
     <state x="396" y="235" key="FileChooserDialogImpl" timestamp="1610995489356">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="396" y="235" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610995489356" />
-    <state width="1899" height="283" key="GridCell.Tab.0.bottom" timestamp="1613983629979">
+    <state width="1899" height="283" key="GridCell.Tab.0.bottom" timestamp="1613987916186">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1613983629979" />
-    <state width="1899" height="283" key="GridCell.Tab.0.center" timestamp="1613983629979">
+    <state width="1899" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1613987916186" />
+    <state width="1899" height="283" key="GridCell.Tab.0.center" timestamp="1613987916185">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="283" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1613983629979" />
-    <state width="1899" height="283" key="GridCell.Tab.0.left" timestamp="1613983629978">
+    <state width="1899" height="283" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1613987916185" />
+    <state width="1899" height="283" key="GridCell.Tab.0.left" timestamp="1613987916185">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="283" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1613983629978" />
-    <state width="1899" height="283" key="GridCell.Tab.0.right" timestamp="1613983629979">
+    <state width="1899" height="283" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1613987916185" />
+    <state width="1899" height="283" key="GridCell.Tab.0.right" timestamp="1613987916185">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="283" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1613983629979" />
+    <state width="1899" height="283" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1613987916185" />
     <state x="404" y="133" key="SettingsEditor" timestamp="1611561831451">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="404" y="133" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611561831451" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Mastermind$Unittests_for_unittesting_DataTests_test_save_get.coverage" NAME="Unittests for unittesting.DataTests.test_save_get Coverage Results" MODIFIED="1612254318956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mastermind$Unittests_for_unittesting_DataTests_test_save.coverage" NAME="Unittests for unittesting.DataTests.test_save Coverage Results" MODIFIED="1612252165771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mastermind$Mastermind_Logic.coverage" NAME="Mastermind_Logic Coverage Results" MODIFIED="1612218336561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mastermind$Mastermind_present.coverage" NAME="Mastermind_present Coverage Results" MODIFIED="1612770107921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mastermind$Mastermind_Data.coverage" NAME="Mastermind_Data Coverage Results" MODIFIED="1612166141517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mastermind$Unittests_for_unittesting_LogicTests_test_save.coverage" NAME="Unittests for unittesting.LogicTests.test_save Coverage Results" MODIFIED="1612254374803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mastermind$Unittests_for_unittesting_LogicTests.coverage" NAME="Unittests for unittesting.LogicTests Coverage Results" MODIFIED="1612254242216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

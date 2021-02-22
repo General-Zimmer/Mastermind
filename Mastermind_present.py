@@ -1,4 +1,5 @@
 from tkinter import *
+import Mastermind_Logic as logic
 # import random
 
 nguess = 10
@@ -15,31 +16,17 @@ for i in range(ncombi):
 for i in range(2):
     gui.rowconfigure(i + ncombi, weight=1)
 
+game = logic.dinLogik
+
 backg = Label(gui, bg="grey")
 backg.grid(column=0, row=0, columnspan=nguess, rowspan=ncombi, sticky="NESW")
-for i in range(nguess):
+for i in range(nguess+1):
     backg.columnconfigure(i, weight=2)
 for i in range(ncombi+1):
     backg.rowconfigure(i, weight=2)
 
 UI = Label(gui, bg="black")
 UI.grid(column=0, row=ncombi, columnspan=nguess, rowspan=2, sticky="NESW")
-
-# making random button color
-# def get_random_color():
-#    de = ("%02x" % random.randint(0, 255))
-#    re = ("%02x" % random.randint(0, 255))
-#    we = ("%02x" % random.randint(0, 255))
-#    ge = "#"
-#    color = ge + de + re + we
-#    return color
-#
-# def get_complementary(color):
-#    color = color[1:]
-#    color = int(color, 16)
-#    comp_color = 0xFFFFFF ^ color
-#    comp_color = "#%06X" % comp_color
-#    return comp_color
 
 Guess = []
 nx = 0
@@ -63,7 +50,7 @@ def AddWhite():
     AddColor("white")
 def submit():
     global nx
-    if len(Guess) == 4:
+    if len(Guess) == ncombi:
         # test combination
         print(Guess)
         for i in range(len(Guess)):
@@ -80,6 +67,19 @@ for x in range(nguess):
     for n in range(ncombi):
         exec(f'L{x}R{n} = Label(backg, bg="gray", relief=RAISED)')
         exec(f'L{x}R{n}.grid(column={x}, row={n}, sticky="NESW")')
+for n in range(ncombi):
+    exec(f'A{n} = Label(backg, bg="white", relief=RAISED)')
+    exec(f'A{n}.grid(column={nguess}, row={n}, sticky="NESW")')
+for x in range(nguess):
+    exec(f'K{x} = Label(backg, bg="black", relief=RAISED)')
+    exec(f'K{x}.grid(column={x}, row={ncombi}, sticky="NESW")')
+    for i in range(2):
+        exec(f'K{x}.columnconfigure({i}, weight=1)')
+    exec(f'K{x}.rowconfigure(0, weight=1)')
+    exec(f'K{x}R = Label(K{x}, bg="red", relief=RAISED)')
+    exec(f'K{x}R.grid(column=0, row=0, sticky="NESW")')
+    exec(f'K{x}W = Label(K{x}, bg="white", relief=RAISED)')
+    exec(f'K{x}W.grid(column=1, row=0, sticky="NESW")')
 
 green = Button(gui, bg="dark green", command=AddGreen)
 green.grid(column=0, row=4, sticky="NESW")
