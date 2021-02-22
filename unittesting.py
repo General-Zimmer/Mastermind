@@ -11,6 +11,9 @@ class DataTests(unittest.TestCase):
         self.dat.gemStart(["blå", "grøn", "rød", "blå"])
         self.assertEqual(["blå", "grøn", "rød", "blå"], self.dat.getStart())
 
+        self.dat.gemStart(["blafae", "grøner", "rødgrød med fløde", "blågrød med fløde"])
+        self.assertEqual(["blafae", "grøner", "rødgrød med fløde", "blågrød med fløde"], self.dat.getStart())
+
     def tearDown(self):
         pass
 
