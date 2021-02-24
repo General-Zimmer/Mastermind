@@ -1,5 +1,5 @@
 import Mastermind_Data as data
-from random import randrange
+import random
 
 
 class dinLogik:
@@ -22,7 +22,7 @@ class dinLogik:
     def makeStart(self, num):
         lst = []
         for x in range(num):
-            lst.insert(x, self.trans.get(randrange(6)))
+            lst.insert(x, self.trans.get(random.randrange(6)))
         self.dat.gemStart(lst)
 
     def tjekFarve(self, get: list):
@@ -48,6 +48,13 @@ class dinLogik:
         svar[1] = svar[1] - svar[0]
         return svar
 
+    def RandColor(self):
+        de = ("%02x" % random.randint(20, 255))
+        re = ("%02x" % random.randint(20, 255))
+        we = ("%02x" % random.randint(20, 255))
+        ge = "#"
+        color = ge + de + re + we
+        return color
 #geat = ["white", "dark green", "yellow", "dark blue"]
 #start = ["blå", "grøn", "blå", "røfa", "lygesgr"]
 #lo = dinLogik()
@@ -55,4 +62,9 @@ class dinLogik:
 #print(lo.tjekFarve(geat))
 
 #lo.makeStart(4)
+<<<<<<< Updated upstream
 #print(lo.dat.getStart())
+=======
+#print(lo.tjekFarve(geat))
+#print(lo.dat.getStart())
+>>>>>>> Stashed changes

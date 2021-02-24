@@ -1,6 +1,5 @@
 from tkinter import *
 import Mastermind_Logic as logic
-# import random
 
 nguess = 10
 ncombi = 4
@@ -73,9 +72,17 @@ def submit():
         SV = game.tjekFarve(Guess)
         exec(f'K{nx}R.config(text="{SV[0]}")')
         exec(f'K{nx}W.config(text="{SV[1]}")')
+        nx += 1
+        if SV[0]==ncombi:
+            for x in range(nguess-nx):
+                for n in range(ncombi):
+                    color=game.RandColor()
+                    exec(f'L{x+nx}R{n}.config(bg="{color}")')
+            for e in range(ncombi):
+                exec(f'A{e}.config(bg="{game.dat.starts[e]}")')
         for i in range(len(Guess)):
             Guess.pop(0)
-        nx += 1
+
 def delete():
     if len(Guess) > 0:
         Guess.pop(-1)
