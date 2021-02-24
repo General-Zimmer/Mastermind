@@ -55,16 +55,12 @@ class dinLogik:
         ge = "#"
         color = ge + de + re + we
         return color
-#geat = ["white", "dark green", "yellow", "dark blue"]
-#start = ["blå", "grøn", "blå", "røfa", "lygesgr"]
-#lo = dinLogik()
-#lo.huskFarve(start)
-#print(lo.tjekFarve(geat))
+# geat = ["white", "dark green", "yellow", "dark blue"]
+# start = ["blå", "grøn", "blå", "røfa", "lygesgr"]
+# lo = dinLogik()
+# lo.huskFarve(start)
+# print(lo.tjekFarve(geat))
 
-#lo.makeStart(4)
-<<<<<<< Updated upstream
-#print(lo.dat.getStart())
-=======
-#print(lo.tjekFarve(geat))
-#print(lo.dat.getStart())
->>>>>>> Stashed changes
+# lo.makeStart(4)
+
+# print(lo.dat.getStart())
