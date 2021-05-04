@@ -24,7 +24,7 @@ class LogicTests(unittest.TestCase):
 
     def test_save_tjekfarve(self):
         self.lo.huskStart(["grøn", "blå", "hvid", "gul", "lilla"])
-        self.assertEqual([1, 1], self.lo.tjekFarve(["grøn", "null", "blå", "null", "null"]))
+        self.assertEqual([1, 2], self.lo.tjekFarve(["grøn", "null", "blå", "null", "blå"]))
 
     def tearDown(self):
         pass
